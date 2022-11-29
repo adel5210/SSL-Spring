@@ -12,7 +12,7 @@ build:
   ssl-spring:
     context: .
     dockerfile: Dockerfile
-    image: ssl-spring:latest
+#    image: ssl-spring:latest
 
 # The deploy section defines how to deploy your development environment
 # More info: https://www.okteto.com/docs/reference/manifest/#deploy
