@@ -1,17 +1,16 @@
 version: '1'
 services:
-  mini-chat:
-    container_name: mini-chat
+  ssl-spring:
+    container_name: ssl-spring
     build:
       context: .
       dockerfile: Dockerfile
-    image: mini-chat:latest
+    image: ssl-spring:latest
     ports:
       - 8080:8080
-      - 8081:8081
       - 8443:8443
     networks:
-      - mini-chat-network
+      - ssl-spring-network
 networks:
-  mini-chat-network:
+  ssl-spring-network:
     driver: bridge
