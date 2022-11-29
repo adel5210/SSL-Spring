@@ -1,0 +1,17 @@
+version: '1'
+services:
+  mini-chat:
+    container_name: mini-chat
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mini-chat:latest
+    ports:
+      - 8080:8080
+      - 8081:8081
+      - 8443:8443
+    networks:
+      - mini-chat-network
+networks:
+  mini-chat-network:
+    driver: bridge
